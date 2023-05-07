@@ -1,0 +1,524 @@
+<?php
+session_start();
+error_reporting(0)
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Contact</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Travelix Project">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+    <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="styles/contact_styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/contact_responsive.css">
+
+    <link rel="stylesheet" href="admin_folder/external_assests/assets/css/app.min.css">
+    <link rel="stylesheet" href="admin_folder/external_assests/assets/css/style.css">
+    <link rel="stylesheet" href="admin_folder/external_assests/assets/css/components.css">
+    <link rel="stylesheet" href="admin_folder/external_assests/assets/css/custom.css">
+</head>
+
+<body>
+
+    <div class="super_container">
+
+        <!-- Header -->
+
+        <header class="header">
+
+            <!-- Top Bar -->
+
+            <div class="top_bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col d-flex flex-row">
+                            <div class="phone">+45 345 3324 56789</div>
+                            <div class="social">
+                                <ul class="social_list">
+                                    <li class="social_list_item"><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                                    <li class="social_list_item"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                    <li class="social_list_item"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                    <li class="social_list_item"><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+                                    <li class="social_list_item"><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+                                    <li class="social_list_item"><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="user_box ml-auto">
+								<div id="ses" class="user_box_login user_box_link"><a href="#"><?php echo $_SESSION["email_id"] ?></a></div>
+								<div id="signOut" class="user_box_login user_box_link"><a href="#" name="signOut">Sign
+										Out</a></div>
+								<div class="user_box_login user_box_link"><a href="login.php" id="log">login</a></div>
+								<div class="user_box_register user_box_link"><a href="signup.php" id="reg">register</a>
+								</div>
+							</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Navigation -->
+
+            <nav class="main_nav">
+                <div class="container">
+                    <div class="row">
+                        <div class="col main_nav_col d-flex flex-row align-items-center justify-content-start">
+                            <div class="logo_container">
+                                <div class="logo"><a href="#"><img src="images/logo.png" alt="">travelix</a></div>
+                            </div>
+                            <div class="main_nav_container ml-auto">
+                                <ul class="main_nav_list">
+                                <li class="main_nav_item"><a href="index.php">HOME</a></li>
+									<li class="main_nav_item"><a href="blog.php">news</a></li>
+									<li class="main_nav_item"><a href="buses.php">Buses</a></li>
+									<li class="main_nav_item"><a href="contact.php">contact</a></li>
+									<li class="main_nav_item"><a href="find.php">Find My bus</a></li>
+                                </ul>
+                            </div>
+                            <div class="content_search ml-lg-0 ml-auto">
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17px" height="17px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+                                    <g>
+                                        <g>
+                                            <g>
+                                                <path class="mag_glass" fill="#FFFFFF" d="M78.438,216.78c0,57.906,22.55,112.343,63.493,153.287c40.945,40.944,95.383,63.494,153.287,63.494
+											s112.344-22.55,153.287-63.494C489.451,329.123,512,274.686,512,216.78c0-57.904-22.549-112.342-63.494-153.286
+											C407.563,22.549,353.124,0,295.219,0c-57.904,0-112.342,22.549-153.287,63.494C100.988,104.438,78.439,158.876,78.438,216.78z
+											M119.804,216.78c0-96.725,78.69-175.416,175.415-175.416s175.418,78.691,175.418,175.416
+											c0,96.725-78.691,175.416-175.416,175.416C198.495,392.195,119.804,313.505,119.804,216.78z" />
+                                            </g>
+                                        </g>
+                                        <g>
+                                            <g>
+                                                <path class="mag_glass" fill="#FFFFFF" d="M6.057,505.942c4.038,4.039,9.332,6.058,14.625,6.058s10.587-2.019,14.625-6.058L171.268,369.98
+											c8.076-8.076,8.076-21.172,0-29.248c-8.076-8.078-21.172-8.078-29.249,0L6.057,476.693
+											C-2.019,484.77-2.019,497.865,6.057,505.942z" />
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+
+                            <form id="search_form" class="search_form bez_1">
+                                <input type="search" class="search_content_input bez_1">
+                            </form>
+
+                            <div class="hamburger">
+                                <i class="fa fa-bars trans_200"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+        </header>
+
+        <div class="menu trans_500">
+            <div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
+                <div class="menu_close_container">
+                    <div class="menu_close"></div>
+                </div>
+                <div class="logo menu_logo"><a href="#"><img src="images/logo.png" alt=""></a></div>
+                <ul>
+                <li class="main_nav_item"><a href="index.php">HOME</a></li>
+					<li class="main_nav_item"><a href="blog.html">news</a></li>
+					<li class="main_nav_item"><a href="buses.php">Buses</a></li>
+					<li class="main_nav_item"><a href="contact.html">contact</a></li>
+					<li class="main_nav_item"><a href="find.php">Find My bus</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Home -->
+
+        <div class="home">
+            <div class="home_background parallax-window" data-parallax="scroll" data-image-src="images/contact_background.jpg"></div>
+            <div class="home_content">
+                <div class="home_title">My Ticke's</div>
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <form action="#" method="post">
+            <div class="contact_form_section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+
+                            <!-- Contact Form -->
+                            <div class="contact_form_container">
+                                <div class="contact_title text-center">Get the Ticket's here !</div>
+                                <form action="#" id="contact_form" class="contact_form text-center">
+                                    <input type="text" id="email" name="email" class="contact_form_email input_field" placeholder="E-mail" required="required" data-error="Email is required.">
+                                    <button type="submit" id="submit" name="submit" class="mx-4 form_submit_button button trans_200">Find<span></span><span></span><span></span></button>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+        </form>
+        <?php
+
+        if (isset($_POST['submit'])) {
+
+
+
+            include 'db_con.php';
+
+            $email = $_POST['email'];
+
+
+
+            $query = "SELECT * FROM  booked_bus  WHERE email = '$email' ORDER BY  -id ";
+            $result = mysqli_query($con, $query);
+            if (mysqli_num_rows($result) > 0) {
+                while ($row = mysqli_fetch_array($result)) { ?>
+
+                    <div class="container my-3">
+                        <div class="row">
+                            <div class="col">
+                                <div class="contact_form_container">
+                                    <div class="row mt-3">
+                                        <div class="col-lg-12">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="section-body">
+                                                        <div class="invoice">
+                                                            <div class="invoice-print">
+                                                                <div class="row">
+                                                                    <div class="col-lg-12">
+                                                                        <div class="invoice-title">
+                                                                            <h2>Mr/Mrs <?php echo $row['name'] ?></h2>
+                                                                            <div class="invoice-number">Order #12345</div>
+                                                                        </div>
+                                                                        <hr>
+                                                                        <div class="row">
+                                                                            <div class="col-md-6">
+                                                                                <address>
+                                                                                    <strong>Billed To:</strong><br>
+                                                                                    <?php echo $row['email'] ?>,<br>
+                                                                                    <?php echo $row['name'] ?><br>
+                                                                                </address>
+                                                                            </div>
+                                                                            <div class="col-md-6 text-md-right">
+                                                                                <address>
+                                                                                    <strong>Address :</strong><br>
+                                                                                    <?php echo $row['name'] ?><br>
+                                                                                    <?php echo $row['address'] ?><br>
+                                                                                    <?php echo $row['mobile'] ?>,<br>
+                                                                                    <?php echo $row['altphone'] ?>
+                                                                                </address>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="col-md-6">
+                                                                                <address>
+                                                                                    <strong>Payment Method:</strong><br>
+                                                                                    Visa ending **** 5687<br>
+                                                                                    RazorPay.com
+                                                                                </address>
+                                                                            </div>
+                                                                            <div class="col-md-6 text-md-right">
+                                                                                <address>
+                                                                                    <strong>Order Date:</strong><br>
+                                                                                    <span id='date-time'></span><br><br>
+                                                                                </address>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row mt-4">
+                                                                    <div class="col-md-12">
+                                                                        <div class="section-title">Travle Summary</div>
+                                                                        <p class="section-lead">All items here cannot be deleted.</p>
+                                                                        <div class="table-responsive">
+                                                                            <table class="table table-striped table-hover table-md">
+                                                                                <tr>
+                                                                                    <th data-width="40">No</th>
+                                                                                    <th>Bus No</th>
+                                                                                    <th class="text-center">Seat price</th>
+                                                                                    <th class="text-center">Bus Seats</th>
+                                                                                    <th class="text-center">Date</th>
+                                                                                    <th class="text-center">Time</th>
+                                                                                    <th class="text-right">No Of Passangers</th>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td><?php echo $row['id'] ?></td>
+                                                                                    <td><?php echo $row['bus_no'] ?></td>
+                                                                                    <td class="text-center"><?php echo $row['per_seat_price'] ?></td>
+                                                                                    <td class="text-center"><?php echo $row['bus_seat'] ?></td>
+                                                                                    <td class="text-right"><?php echo $row['date'] ?></td>
+                                                                                    <td class="text-right"><?php echo $row['time'] ?></td>
+                                                                                    <td class="text-right"><?php echo $row['no_of_passanger'] ?>-P</td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </div>
+                                                                        <div class="row mt-4">
+                                                                            <div class="col-lg-8">
+                                                                                <div class="section-title">Payment Method</div>
+                                                                                <p class="section-lead">The payment method that we provide is to make it easier for you to pay
+                                                                                    invoices.</p>
+
+                                                                            </div>
+                                                                            <div class="col-lg-4 text-right">
+                                                                                <div class="invoice-detail-item">
+                                                                                    <div class="invoice-detail-name">Subtotal</div>
+                                                                                    <div class="invoice-detail-value"><?php echo $row['total_price'] ?>/-</div>
+                                                                                </div>
+                                                                                <hr class="mt-2 mb-2">
+                                                                                <div class="invoice-detail-item">
+                                                                                    <div class="invoice-detail-name">Total</div>
+                                                                                    <div class="invoice-detail-value invoice-detail-value-lg"><?php echo $row['total_price'] ?>/-</div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <hr>
+                                                            <div class="text-md-right">
+                                                                <div class="float-lg-left mb-lg-0 mb-3">
+                                                                    <button class="btn btn-primary btn-icon icon-left"><i class="fas fa-credit-card"></i> Process
+                                                                        Payment status -></button>
+                                                                </div>
+                                                                <button class="btn btn-warning btn-icon icon-left"><i class="fas fa-print"></i><?php echo $row['payment_status'] ?></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    </div>
+<?php }
+            };
+        }
+?>
+
+<!-- About -->
+<div class="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+
+                <!-- About - Image -->
+
+                <div class="about_image">
+                    <img src="images/man.png" alt="">
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <!-- About - Content -->
+
+                <div class="about_content">
+                    <div class="logo_container about_logo">
+                        <div class="logo"><a href="#"><img src="images/logo.png" alt="">travelix</a></div>
+                    </div>
+                    <p class="about_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis vu lputate eros, iaculis consequat nisl. Nunc et suscipit urna. Integer eleme ntum orci eu vehicula iaculis consequat nisl. Nunc et suscipit urna pretium.</p>
+                    <ul class="about_social_list">
+                        <li class="about_social_item"><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                        <li class="about_social_item"><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                        <li class="about_social_item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li class="about_social_item"><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                        <li class="about_social_item"><a href="#"><i class="fa fa-behance"></i></a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="col-lg-3">
+
+                <!-- About Info -->
+
+                <div class="about_info">
+                    <ul class="contact_info_list">
+                        <li class="contact_info_item d-flex flex-row">
+                            <div>
+                                <div class="contact_info_icon"><img src="images/placeholder.svg" alt=""></div>
+                            </div>
+                            <div class="contact_info_text">4127 Raoul Wallenber 45b-c Gibraltar</div>
+                        </li>
+                        <li class="contact_info_item d-flex flex-row">
+                            <div>
+                                <div class="contact_info_icon"><img src="images/phone-call.svg" alt=""></div>
+                            </div>
+                            <div class="contact_info_text">2556-808-8613</div>
+                        </li>
+                        <li class="contact_info_item d-flex flex-row">
+                            <div>
+                                <div class="contact_info_icon"><img src="images/message.svg" alt=""></div>
+                            </div>
+                            <div class="contact_info_text"><a href="mailto:contactme@gmail.com?Subject=Hello" target="_top">contactme@gmail.com</a></div>
+                        </li>
+                        <li class="contact_info_item d-flex flex-row">
+                            <div>
+                                <div class="contact_info_icon"><img src="images/planet-earth.svg" alt=""></div>
+                            </div>
+                            <div class="contact_info_text"><a href="https://colorlib.com">www.colorlib.com</a></div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Google Map -->
+
+<div class="travelix_map">
+    <div id="google_map" class="google_map">
+        <div class="map_container">
+            <div id="map"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+
+            <!-- Footer Column -->
+            <div class="col-lg-3 footer_column">
+                <div class="footer_col">
+                    <div class="footer_content footer_about">
+                        <div class="logo_container footer_logo">
+                            <div class="logo"><a href="#"><img src="images/logo.png" alt="">travelix</a></div>
+                        </div>
+                        <p class="footer_about_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis vu lputate eros, iaculis consequat nisl. Nunc et suscipit urna. Integer eleme ntum orci eu vehicula pretium.</p>
+                        <ul class="footer_social_list">
+                            <li class="footer_social_item"><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                            <li class="footer_social_item"><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                            <li class="footer_social_item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li class="footer_social_item"><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                            <li class="footer_social_item"><a href="#"><i class="fa fa-behance"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Column -->
+            <div class="col-lg-3 footer_column">
+                <div class="footer_col">
+                    <div class="footer_title">blog posts</div>
+                    <div class="footer_content footer_blog">
+
+                        <!-- Footer blog item -->
+                        <div class="footer_blog_item clearfix">
+                            <div class="footer_blog_image"><img src="images/footer_blog_1.jpg" alt="https://unsplash.com/@avidenov"></div>
+                            <div class="footer_blog_content">
+                                <div class="footer_blog_title"><a href="blog.html">Travel with us this year</a></div>
+                                <div class="footer_blog_date">Nov 29, 2017</div>
+                            </div>
+                        </div>
+
+                        <!-- Footer blog item -->
+                        <div class="footer_blog_item clearfix">
+                            <div class="footer_blog_image"><img src="images/footer_blog_2.jpg" alt="https://unsplash.com/@deannaritchie"></div>
+                            <div class="footer_blog_content">
+                                <div class="footer_blog_title"><a href="blog.html">New destinations for you</a></div>
+                                <div class="footer_blog_date">Nov 29, 2017</div>
+                            </div>
+                        </div>
+
+                        <!-- Footer blog item -->
+                        <div class="footer_blog_item clearfix">
+                            <div class="footer_blog_image"><img src="images/footer_blog_3.jpg" alt="https://unsplash.com/@bergeryap87"></div>
+                            <div class="footer_blog_content">
+                                <div class="footer_blog_title"><a href="blog.html">Travel with us this year</a></div>
+                                <div class="footer_blog_date">Nov 29, 2017</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Column -->
+            <div class="col-lg-3 footer_column">
+                <div class="footer_col">
+                    <div class="footer_title">tags</div>
+                    <div class="footer_content footer_tags">
+                        <ul class="tags_list clearfix">
+                            <li class="tag_item"><a href="#">design</a></li>
+                            <li class="tag_item"><a href="#">fashion</a></li>
+                            <li class="tag_item"><a href="#">music</a></li>
+                            <li class="tag_item"><a href="#">video</a></li>
+                            <li class="tag_item"><a href="#">party</a></li>
+                            <li class="tag_item"><a href="#">photography</a></li>
+                            <li class="tag_item"><a href="#">adventure</a></li>
+                            <li class="tag_item"><a href="#">travel</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Column -->
+            <div class="col-lg-3 footer_column">
+                <div class="footer_col">
+                    <div class="footer_title">contact info</div>
+                    <div class="footer_content footer_contact">
+                        <ul class="contact_info_list">
+                            <li class="contact_info_item d-flex flex-row">
+                                <div>
+                                    <div class="contact_info_icon"><img src="images/placeholder.svg" alt=""></div>
+                                </div>
+                                <div class="contact_info_text">4127 Raoul Wallenber 45b-c Gibraltar</div>
+                            </li>
+                            <li class="contact_info_item d-flex flex-row">
+                                <div>
+                                    <div class="contact_info_icon"><img src="images/phone-call.svg" alt=""></div>
+                                </div>
+                                <div class="contact_info_text">2556-808-8613</div>
+                            </li>
+                            <li class="contact_info_item d-flex flex-row">
+                                <div>
+                                    <div class="contact_info_icon"><img src="images/message.svg" alt=""></div>
+                                </div>
+                                <div class="contact_info_text"><a href="mailto:contactme@gmail.com?Subject=Hello" target="_top">contactme@gmail.com</a></div>
+                            </li>
+                            <li class="contact_info_item d-flex flex-row">
+                                <div>
+                                    <div class="contact_info_icon"><img src="images/planet-earth.svg" alt=""></div>
+                                </div>
+                                <div class="contact_info_text"><a href="https://colorlib.com">www.colorlib.com</a></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+
+
+
+</div>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="styles/bootstrap4/popper.js"></script>
+<script src="styles/bootstrap4/bootstrap.min.js"></script>
+<script src="plugins/parallax-js-master/parallax.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCIwF204lFZg1y4kPSIhKaHEXMLYxxuMhA"></script>
+<script src="js/contact_custom.js"></script>
+
+</body>
+
+</html>
